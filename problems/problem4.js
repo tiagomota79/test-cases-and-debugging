@@ -1,9 +1,9 @@
 let verifyEquals = require('./verify-equals.js');
 
 // we need 8 test cases. I've provided the first 2
-let inputs = [['hello', 4], ['', 2]];
+let inputs = [['hello', 4], ['', 2], ['special', 3], ['noob', 0], ['goodbye', 5], ['undefined', 2], ['seven', 2], ['eight', 3]];
 
-let outputs = ['o', undefined];
+let outputs = ['o', undefined, 'c', 'n', 'y', 'd', 'v', 'h'];
 
 /*
 Make this function return the letter at the specified position in the string. If no such letter exists, it should return undefined.
@@ -14,7 +14,9 @@ f(["", 4]); // undefined
 f(["abc", 0]); // a
 
 */
-function f(arr) {}
+function f(arr) {
+  return (arr[0].charAt(arr[1]) === '') ? undefined : arr[0].charAt(arr[1]) ;
+}
 
 //This function runs a test. You do not need to change any code under here
 function runTest(i) {

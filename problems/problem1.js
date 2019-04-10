@@ -1,9 +1,9 @@
 let verifyEquals = require('./verify-equals.js'); // this line imports the verifyEquals function from the verify-equals.js file
 
 // we need 5 test cases. I provided 1 input
-let inputs = ['max'];
+let inputs = ['max','none','super','uber','average'];
 
-let outputs = ['m'];
+let outputs = ['m','n','s','u','a'];
 
 // Make this function return the first letter of the string that is passed to it. If the string does not have a first letter, return undefined
 function f(str) {
