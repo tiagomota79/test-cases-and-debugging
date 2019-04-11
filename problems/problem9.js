@@ -1,9 +1,9 @@
 let verifyEquals = require('./verify-equals.js');
 
 // we need 5 test cases.
-let inputs = [];
+let inputs = ['This string has some long words', 'Whatever you need', 'word with same goal', 'a base for success', 'a new beginning'];
 
-let outputs = [];
+let outputs = ['string', 'Whatever', 'goal', 'success', 'beginning'];
 
 /*
 Make this function return the longest word in the input string. If the input string is empty then return an empty string.
@@ -16,7 +16,17 @@ HINTS:
    - You'll need to use the split string method
    - A for loop might be helpful
 */
-function f(str) {}
+function f(str) {
+  if (str === '') {
+    return ''
+  } else {
+    let stringNumber = [];
+    for (l = 0; l < str.split(' ').length; l++) {
+    stringNumber.push(str.split(' ')[l].length);
+  }
+  return(str.split(' ')[stringNumber.lastIndexOf(Math.max.apply(null, stringNumber))])
+  }
+}
 
 //This function runs a test. You do not need to change any code under here
 function runTest(i) {

@@ -9,6 +9,8 @@ First, fork this repository, then follow the instructions
 3. Do the following commands (you need to replace LINK_YOU_COPIED with the link for your forked repository):
    - git clone LINK_YOU_COPIED
    - cd test-cases-and-debugging
+   - npm install
+     - This installs external packages needed for the workshop. If this does not work, you'll need to install [node](https://nodejs.org/en/download/)
    - code .
 
 ![instructions](instructions.png)
