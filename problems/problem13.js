@@ -1,9 +1,9 @@
 let verifyEquals = require('./verify-equals.js');
 
 // we need 5 test cases.
-let inputs = [];
+let inputs = ['Not a palindrome', 'step on no pets', 'Step on no pets', 'neveroddoreven', 'Never odd or even'];
 
-let outputs = [];
+let outputs = [false, true, false, true, false];
 
 /*
 Make this function return true if the input string is a palindrome, and false otherwise. A palindrome is simply a string that is the same if you reverse it.
@@ -11,7 +11,17 @@ Make this function return true if the input string is a palindrome, and false ot
 RADAR -> Yes
 JAVASCRIPT -> No
 */
-function f(str) {}
+function f(str) {
+  let split = str.split('');
+  let revArr = [];
+  for (l = str.length - 1; l >= 0; l--) {
+    revArr.push(split[l]);
+  }
+  if (str === revArr.join('')) {
+    return true
+  }
+  return false
+}
 
 //This function runs a test. You do not need to change any code under here
 function runTest(i) {
